@@ -67,12 +67,8 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="absolute left-1/2 top-0 z-[20] h-[490px] w-full max-w-[2586px] -translate-x-1/2 transform">
-            <img
-              src="/imgs/header.png"
-              alt="header"
-              className="w-full object-cover"
-            />
+          <div className="absolute left-1/2 top-0 z-[20] h-[490px] w-[2586px] -translate-x-1/2 transform">
+            <img src="/imgs/header.png" alt="header" />
           </div>
         </div>
       </section>
