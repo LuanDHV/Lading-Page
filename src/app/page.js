@@ -11,9 +11,9 @@ export default function Home() {
     <>
       <section>
         <div className="relative">
-          <div className="mx-auto h-[336px] w-[1440px] bg-gradient-to-b from-[#7715F9] to-[#D63DFF]">
-            <div className="relative top-[20px] mx-auto flex h-[80px] w-[1108px] items-center justify-between rounded-[20px] bg-gradient-to-t from-[#D1D1D126] to-[#6666660D] px-5">
-              <div className="flex h-[22px] w-[463px] gap-16 text-sm font-medium text-white">
+          <div className="mx-auto h-[336px] w-[390px] bg-gradient-to-b from-[#7715F9] to-[#D63DFF] md:w-[1440px]">
+            <div className="relative mx-auto flex h-[80px] w-[390px] items-center justify-between rounded-[20px] bg-gradient-to-t from-[#D1D1D126] to-[#6666660D] px-5 md:top-[20px] md:w-[1108px]">
+              <div className="hidden h-[22px] w-[463px] gap-16 text-sm font-medium text-white md:flex">
                 <Link href="#">Gallery</Link>
                 <Link href="#">
                   Solutions
@@ -35,13 +35,24 @@ export default function Home() {
                 height={37}
                 objectFit="cover"
               />
-              <div className="flex h-[40px] w-[463px] items-center justify-end gap-16 text-sm font-medium text-white">
-                <Link href="#" className="h-[21.8px] w-[46.06px]">
+              <div className="flex h-[40px] w-[463px] items-center justify-end gap-4 text-sm font-medium text-white md:gap-16">
+                <Link
+                  href="#"
+                  className="hidden h-[21.8px] w-[46.06px] md:inline-block"
+                >
                   Gallery
                 </Link>
                 <button className="h-[40px] w-[94px] rounded-xl bg-gradient-to-t from-[#7D66F5] to-[#4A29C2]">
                   Sign Up
                 </button>
+                <Image
+                  src="/imgs/ic-bars.png"
+                  alt="ic-bars"
+                  width={36}
+                  height={36}
+                  objectFit="cover"
+                  className="inline-block md:hidden"
+                />
               </div>
             </div>
             <div className="mt-[30px]">
@@ -62,15 +73,17 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="relative z-50 mt-6 px-[72px]">
-          <div className="mx-auto grid h-[545px] w-[940px] grid-cols-3 gap-[16px] text-[12px] text-white">
-            <div className="grid h-[545px] w-[302px] justify-items-center gap-4 rounded-[20px] bg-gradient-to-t from-[#42424200] to-[#7070B233] p-4">
-              <div className="h-[30px] w-[65.41px]">Starter</div>
-              <div className="h-[106px] w-[105px] gap-[16px]">
+        <div className="relative z-50 mt-6 px-9 md:px-[72px]">
+          <div className="mx-auto grid grid-rows-3 justify-items-center gap-[16px] text-white md:h-[545px] md:w-[940px] md:grid-cols-3">
+            <div className="grid h-[444px] w-[351px] justify-items-start gap-4 rounded-[20px] bg-gradient-to-t from-[#42424200] to-[#7070B233] p-9 md:h-[545px] md:w-[302px] md:justify-items-center md:p-4">
+              <div className="grid h-[37px] w-[78.34px] items-center text-[23px] md:h-[30px] md:w-[65.41px] md:text-[19px]">
+                Starter
+              </div>
+              <div className="grid h-[48px] w-[230.69px] grid-cols-2 items-center gap-[16px] md:block md:h-[106px] md:w-[105px]">
                 <p className="text-[51px]">Free</p>
                 <p className="text-sm">Unlimited users and guests</p>
               </div>
-              <div className="text-sx grid h-[281px] w-[243.59px] grid-rows-5 gap-[16px] pb-[101px] pt-[20px]">
+              <div className="grid h-[192px] w-[279px] grid-rows-5 gap-[16px] pb-[20px] pt-[20px] text-xs md:h-[281px] md:w-[243.59px] md:pb-[101px] md:text-base">
                 <div className="h-[24px] w-[243.59px]">
                   <Image
                     src="/imgs/ic-check.png"
@@ -131,18 +144,18 @@ export default function Home() {
                 Sign up today
               </button>
             </div>
-            <div className="grid h-[545px] w-[302px] justify-items-center gap-4 rounded-[20px] bg-gradient-to-t from-[#42424200] to-[#22672E4D] p-4">
-              <div className="h-[30px] w-[111px] text-[19px] text-[#6FFF88]">
+            <div className="grid h-[410px] w-[351px] justify-items-start gap-4 rounded-[20px] bg-gradient-to-t from-[#42424200] to-[#22672E4D] p-9 md:h-[545px] md:w-[302px] md:justify-items-center md:p-4">
+              <div className="h-[37px] w-[78.34px] text-[23px] text-[#6FFF88] md:h-[30px] md:w-[65.41px] md:text-[19px]">
                 Professional
               </div>
-              <div className="h-[106px] w-[105px] gap-[16px]">
+              <div className="grid h-[48px] w-[230.69px] grid-cols-2 items-center gap-[16px] md:block md:h-[106px] md:w-[105px]">
                 <p className="text-[51px]">$10</p>
                 <p className="text-sm">
                   per user/month
                   <span className="block opacity-50">billed monthly</span>
                 </p>
               </div>
-              <div className="text-sx grid h-[281px] w-[243.59px] grid-rows-4 gap-[10px] pb-[101px] pt-[20px]">
+              <div className="grid h-[158px] w-[279px] grid-rows-5 gap-[16px] pb-[20px] pt-[20px] text-xs md:h-[281px] md:w-[243.59px] md:pb-[101px] md:text-base">
                 <div className="h-[24px] w-[243.59px]">
                   <Image
                     src="/imgs/ic-check.png"
@@ -192,18 +205,18 @@ export default function Home() {
                 Sign up today
               </button>
             </div>
-            <div className="grid h-[545px] w-[302px] justify-items-center gap-4 rounded-[20px] bg-gradient-to-t from-[#42424200] to-[#087C8C4D] p-4">
-              <div className="h-[30px] w-[122px] text-[19px] text-[#75EFFF]">
+            <div className="grid h-[512px] w-[351px] justify-items-start gap-4 rounded-[20px] bg-gradient-to-t from-[#42424200] to-[#087C8C4D] p-9 md:h-[545px] md:w-[302px] md:justify-items-center md:p-4">
+              <div className="h-[37px] w-[78.34px] text-[23px] text-[#75EFFF] md:h-[30px] md:w-[65.41px] md:text-[19px]">
                 Organization
               </div>
-              <div className="h-[106px] w-[105px] gap-[16px]">
+              <div className="grid h-[48px] w-[230.69px] grid-cols-2 items-center gap-[16px] md:block md:h-[106px] md:w-[105px]">
                 <p className="text-[51px]">$18</p>
                 <p className="text-sm">
                   per user/month
                   <span className="block opacity-50">billed monthly</span>
                 </p>
               </div>
-              <div className="text-sx grid h-[281px] w-[243.59px] grid-rows-7 gap-[10px] pb-[20px] pt-[20px]">
+              <div className="grid h-[260px] w-[279px] grid-rows-7 gap-[16px] pb-[20px] pt-[20px] text-xs md:h-[281px] md:w-[243.59px] md:text-base">
                 <div className="h-[24px] w-[243.59px]">
                   <Image
                     src="/imgs/ic-check.png"
@@ -292,23 +305,23 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="px-[72px]">
-          <div className="mx-auto mt-12 flex h-[133px] w-[940px] items-center gap-9 rounded-[20px] bg-gradient-to-t from-[#45454526] to-[#833A8D33] px-7 py-6">
-            <div className="h-[85px] w-[600.48px] gap-[10px]">
-              <div className="inline-block bg-gradient-to-r from-[#A1B4F2] to-[#5F65E3] bg-clip-text text-[31px] text-transparent">
+        <div className="px-9 md:px-[72px]">
+          <div className="mx-auto mt-12 flex h-[224.8px] w-[351px] flex-col items-center justify-center gap-9 rounded-[20px] bg-gradient-to-t from-[#45454526] to-[#833A8D33] px-7 py-6 md:h-[133px] md:w-[940px] md:flex-row">
+            <div className="h-[92.8px] w-[295px] gap-[10px] md:h-[85px] md:w-[600.48px]">
+              <div className="inline-block bg-gradient-to-r from-[#A1B4F2] to-[#5F65E3] bg-clip-text text-[23px] text-transparent md:text-[31px]">
                 Are you a startup?
               </div>
               <div className="text-[18px] text-white">
                 Get started with a discount on any plan.
               </div>
             </div>
-            <button className="h-[48px] w-[247.52px] rounded-lg bg-gradient-to-t from-[#A1A5F2] to-[#8175EA] text-sm font-bold text-[#0A0517]">
+            <button className="h-[48px] w-[295px] rounded-lg bg-gradient-to-t from-[#A1A5F2] to-[#8175EA] text-sm font-bold text-[#0A0517] md:w-[247.52px]">
               Contact Sales
             </button>
           </div>
-          <div className="mx-auto mt-12 flex h-[187px] w-[940px] items-center gap-9 rounded-[20px] bg-gradient-to-t from-[#45454526] to-[#B5831733] px-7 py-6">
-            <div className="h-[139px] w-[600.48px] gap-[10px]">
-              <div className="inline-block bg-gradient-to-r from-[#FFF29F] to-[#FFA52C] bg-clip-text text-[31px] text-transparent">
+          <div className="mx-auto mt-12 flex h-[325.8px] w-[351px] flex-col items-center justify-center gap-9 rounded-[20px] bg-gradient-to-t from-[#45454526] to-[#B5831733] px-7 py-6 md:h-[187px] md:w-[940px] md:flex-row">
+            <div className="h-[193.8px] w-[295px] gap-[10px] md:h-[139px] md:w-[600.48px]">
+              <div className="inline-block bg-gradient-to-r from-[#FFF29F] to-[#FFA52C] bg-clip-text text-[23px] text-transparent md:text-[31px]">
                 Threads Enterprise
               </div>
               <div className="text-[18px] text-white">
@@ -317,16 +330,16 @@ export default function Home() {
                 dedicated customer support, and more.
               </div>
             </div>
-            <button className="h-[48px] w-[247.52px] rounded-lg bg-gradient-to-t from-[#FAE475] to-[#FFAB52] text-sm font-bold text-[#0A0517]">
+            <button className="h-[48px] w-[295px] rounded-lg bg-gradient-to-t from-[#FAE475] to-[#FFAB52] text-sm font-bold text-[#0A0517] md:w-[247.52px]">
               Contact Sales
             </button>
           </div>
-          <div className="mx-auto mt-12 flex h-[214px] w-[940px] items-center gap-9 rounded-[20px] bg-gradient-to-t from-[#45454526] to-[#833A8D33] px-7 py-6">
-            <div className="h-[166px] w-[600.48px] gap-[10px]">
-              <div className="inline-block bg-gradient-to-r from-[#E99FF2] to-[#C85FE3] bg-clip-text text-[31px] text-transparent">
+          <div className="mx-auto mt-12 flex h-[332.8px] w-[351px] flex-col items-center justify-center gap-9 rounded-[20px] bg-gradient-to-t from-[#45454526] to-[#833A8D33] px-7 py-6 md:h-[214px] md:w-[940px] md:flex-row">
+            <div className="h-[200.8px] w-[295px] gap-[10px] md:h-[166px] md:w-[600.48px]">
+              <div className="inline-block bg-gradient-to-r from-[#E99FF2] to-[#C85FE3] bg-clip-text text-[23px] text-transparent md:text-[31px]">
                 Threads Community
               </div>
-              <div className="grid grid-rows-2 items-end">
+              <div className="grid grid-rows-2 items-center md:items-end">
                 <div className="text-[18px] text-white">
                   Threads Community offers communities the same tools that
                   Threads Professional provides at a more achievable price
@@ -337,14 +350,14 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <button className="h-[48px] w-[247.52px] rounded-lg bg-gradient-to-t from-[#E99FF2] to-[#D375EA] text-sm font-bold text-[#0A0517]">
+            <button className="h-[48px] w-[295px] rounded-lg bg-gradient-to-t from-[#E99FF2] to-[#D375EA] text-sm font-bold text-[#0A0517] md:w-[247.52px]">
               Contact Sales
             </button>
           </div>
         </div>
       </section>
       <section>
-        <div className="px-[72px]">
+        <div className="hidden px-[72px] md:block">
           <div className="mx-auto mt-12 flex h-[129.59px] w-[940px] items-end">
             <h1 className="h-[58px] w-full text-center text-5xl font-semibold text-white">
               Compare plans & features
@@ -842,13 +855,13 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="px-[72px]">
-          <div className="mx-auto mt-12 grid h-[283.19px] w-[940px] items-center justify-items-center rounded-[20px] bg-[url('/imgs/footer.png')] font-semibold">
-            <div className="grid h-[188.19px] w-[844px] items-center justify-items-center">
-              <h1 className="text-center text-4xl text-white">
+        <div className="px-9 md:px-[72px]">
+          <div className="mx-auto mt-12 grid h-[244.78px] w-[351px] items-center justify-items-center rounded-[20px] bg-[url('/imgs/footer.png')] font-semibold md:h-[283.19px] md:w-[940px]">
+            <div className="grid h-[197.78px] w-[303px] items-center justify-items-center md:h-[188.19px] md:w-[844px]">
+              <h1 className="text-center text-[32px] text-white md:text-4xl">
                 Make the switch to Threads
               </h1>
-              <div className="grid h-[96px] w-[480px] items-end justify-items-center">
+              <div className="grid h-[77.78px] w-[303px] items-end justify-items-center md:h-[96px] md:w-[480px]">
                 <div className="h-[62px] w-[204px] rounded-xl border border-[#E595FF] p-[5px]">
                   <button className="h-[52px] w-[194px] rounded-lg bg-gradient-to-r from-[#896EFD] to-[#6B4AFC] text-[16px] font-semibold text-[#EFEFF1]">
                     Sign up today
@@ -868,39 +881,72 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="mx-auto mt-24 h-[280px] w-[1156px] px-8">
-          <div className="flex">
-            <div className="grid h-[186px] w-[464.11px] grid-rows-4 text-sm font-semibold text-[#9B9FAA]">
-              <Image
-                src="/imgs/logo-footer-1.png"
-                alt="logo-footer"
-                width={47}
-                height={25}
-                objectFit="cover"
-                className="opacity-80"
-              />
-              <Image
-                src="/imgs/logo-footer-2.png"
-                alt="logo-footer"
-                width={98}
-                height={37}
-                objectFit="cover"
-              />
-              <div className="flex h-[20px] w-[219.72px] justify-between">
-                <span>Privacy Policy</span>
-                <span>Terms of Service</span>
+        <div className="px-9 md:px-[72px]">
+          {/* footer desktop */}
+          <div className="mx-auto mt-24 hidden h-[280px] w-[1156px] px-8 md:block">
+            <div className="flex">
+              <div className="grid h-[186px] w-[464.11px] grid-rows-4 text-sm font-semibold text-[#9B9FAA]">
+                <Image
+                  src="/imgs/logo-footer-1.png"
+                  alt="logo-footer"
+                  width={47}
+                  height={25}
+                  objectFit="cover"
+                  className="opacity-80"
+                />
+                <Image
+                  src="/imgs/logo-footer-2.png"
+                  alt="logo-footer"
+                  width={98}
+                  height={37}
+                  objectFit="cover"
+                />
+                <div className="flex h-[20px] w-[219.72px] justify-between">
+                  <span>Privacy Policy</span>
+                  <span>Terms of Service</span>
+                </div>
+                <div className="">©2023 Threads, Inc.</div>
               </div>
-              <div className="">©2023 Threads, Inc.</div>
+              <div className="grid h-[186px] w-[464.11px] grid-rows-5 place-items-end gap-3 text-sm font-semibold text-[#9B9FAA]">
+                <Link href="#">For Engineers</Link>
+                <Link href="#">For Designers</Link>
+                <Link href="#">For Product Managers</Link>
+                <Link href="#">For Customer Experience</Link>
+                <Link href="#">For Leaders</Link>
+                <Link href="#">Gallery</Link>
+              </div>
+              <div className="grid h-[186px] w-[163.8px] grid-rows-5 place-items-end gap-3 text-sm font-semibold text-[#9B9FAA]">
+                <Link href="#">Blog</Link>
+                <Link href="#">AI</Link>
+                <Link href="#">Case Studies</Link>
+                <Link href="#">Pricing</Link>
+                <Link href="#">Twitter</Link>
+                <Link href="#">Log in</Link>
+              </div>
             </div>
-            <div className="grid h-[186px] w-[464.11px] grid-rows-5 place-items-end gap-3 text-sm font-semibold text-[#9B9FAA]">
-              <Link href="#">For Engineers</Link>
-              <Link href="#">For Designers</Link>
-              <Link href="#">For Product Managers</Link>
-              <Link href="#">For Customer Experience</Link>
-              <Link href="#">For Leaders</Link>
-              <Link href="#">Gallery</Link>
+            <div className="float-end flex h-[44px] w-[490px] items-end text-sm font-semibold text-[#9B9FAA]">
+              Made with 💜 in SF, LA, SAN, SEA, DEN, AA, TOR, BOS, NYC, NJ, PHL,
+              NC
             </div>
-            <div className="grid h-[186px] w-[163.8px] grid-rows-5 place-items-end gap-3 text-sm font-semibold text-[#9B9FAA]">
+          </div>
+
+          {/* footer mobile */}
+          <div className="mx-auto mt-24 grid h-[580px] w-[375px] items-center justify-items-center px-14 text-[#9B9FAA] md:hidden">
+            <Image
+              src="/imgs/logo-footer-1.png"
+              alt="logo-footer"
+              width={40}
+              height={24}
+              objectFit="cover"
+            />
+            <Image
+              src="/imgs/logo-footer-2.png"
+              alt="logo-footer"
+              width={98}
+              height={20}
+              objectFit="cover"
+            />
+            <div className="grid grid-rows-6 justify-items-center gap-4 font-semibold">
               <Link href="#">Blog</Link>
               <Link href="#">AI</Link>
               <Link href="#">Case Studies</Link>
@@ -908,10 +954,18 @@ export default function Home() {
               <Link href="#">Twitter</Link>
               <Link href="#">Log in</Link>
             </div>
-          </div>
-          <div className="float-end flex h-[44px] w-[490px] items-end text-sm font-semibold text-[#9B9FAA]">
-            Made with 💜 in SF, LA, SAN, SEA, DEN, AA, TOR, BOS, NYC, NJ, PHL,
-            NC
+            <p className="mt-5 text-center">
+              Made with 💜
+              <span className="block">
+                SF, LA, SAN, SEA, DEN, AA, TOR, BOS, NYC, NJ, PHL, NC
+              </span>
+            </p>
+            <p></p>
+            <div className="grid grid-cols-2 font-semibold">
+              <span>Privacy Policy</span>
+              <span>Terms of Service</span>
+            </div>
+            <div className="">©2023 Threads, Inc.</div>
           </div>
         </div>
       </section>
